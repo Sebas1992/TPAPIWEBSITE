@@ -4,17 +4,17 @@
 <div class="flex-item">
     <table>
         <thead>
-            <th>Marque</th>
-            <th>Modele</th>
-            <th>SKU</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Description</th>
         </thead>
         <tbody>
-            @foreach((array)$data as $computer)
+            @foreach((array)$data as $phone)
                 <tr>
-                    <td>{{ $computer->brand }}</td>
-                    <td>{{ $computer->model }}</td>
-                    <td>{{ $computer->sku }}</td>
-                    <td><button id="{{ $computer->id }}">Afficher</button></td>
+                    <td>{{ $phone->name }}</td>
+                    <td>{{ $phone->price }}</td>
+                    <td>{{ $phone->description }}</td>
+                    <td><button id="{{ $phone->id }}">Afficher</button></td>
                 </tr>
             @endforeach
         </tbody>
@@ -31,12 +31,12 @@ $(document).ready(function(){
         var id = ($(this).attr('id'));
         $.ajax({
           type:'GET',
-          url:'computer/'+id,
+          url:'phone/'+id,
           dataType: "json",
           success:function(response) {
             if(response) {    
                 var obj = jQuery.parseJSON(response);    
-                $("#selected").html("<p>"+obj.brand+"</p>");
+                $("#selected").html("<p>"+obj.name+"</p>");
                 console.log(obj);
             } else { 
                 alert('nope'); 

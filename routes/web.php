@@ -17,3 +17,4 @@ Route::get('computer', 'ComputerController@index');
 Route::get('phone', 'PhoneController@index');
 Route::get('videogame', 'VideoGameController@index');
 Route::get('computer/{id}', 'ComputerController@get');
+Route::get('phone/{id}', 'PhoneController@get');

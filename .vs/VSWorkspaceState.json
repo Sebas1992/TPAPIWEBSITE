@@ -4,9 +4,10 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
-    "\\config",
+    "\\resources",
+    "\\resources\\views",
     "\\routes"
   ],
-  "SelectedNode": "\\config\\apiroutes.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\ComputerController.php",
   "PreviewInSolutionExplorer": false
 }

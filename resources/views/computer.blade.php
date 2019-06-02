@@ -1,19 +1,20 @@
 @extends('layouts.default')
 
 @section('content')
+
 <div class="flex-item">
     <table>
         <thead>
-            <th>Marque</th>
-            <th>Modele</th>
-            <th>SKU</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Description</th>
         </thead>
         <tbody>
             @foreach((array)$data as $computer)
                 <tr>
+                    <td>{{ $computer->sku }}</td>
                     <td>{{ $computer->brand }}</td>
                     <td>{{ $computer->model }}</td>
-                    <td>{{ $computer->sku }}</td>
                     <td><button id="{{ $computer->id }}">Afficher</button></td>
                 </tr>
             @endforeach
